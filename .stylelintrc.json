@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+  "rules": {
+    "comment-empty-line-before": null,
+    "color-hex-length":"long"
+  }
+}

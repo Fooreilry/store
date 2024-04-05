@@ -1,0 +1,10 @@
+@import url('./normalize.css');
+@import url('./variables/variables.css');
+@import url('./theme/dark.css');
+@import url('./theme/light.css');
+
+.app {
+  font: var(--font-s);
+  background: var(--bg-color);
+  color: var(--primary-font-color);
+}
