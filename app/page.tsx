@@ -1,4 +1,3 @@
-import { HomePage } from "@/src/pages/HomePage";
-
+import HomePage from '@/src/pages/HomePage';
 
 export default HomePage;

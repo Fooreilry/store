@@ -1,1 +1,1 @@
-export const checkSSR = ():boolean => typeof window === 'undefined'
+export const checkSSR = (): boolean => typeof window === 'undefined';

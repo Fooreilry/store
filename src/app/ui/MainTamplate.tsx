@@ -1,14 +1,21 @@
-'use client'
+'use client';
 
-import React from 'react'
+import React from 'react';
 
-export const MainTamplate = ({ header, footer, children}: { children: React.ReactNode }) => {
+export function MainTamplate({
+  header,
+  footer,
+  children,
+}: {
+  children: React.ReactNode;
+  header: React.ReactNode;
+  footer: React.ReactNode;
+}) {
   return (
-      <body>
-          {header}
-          <main>{children}</main>
-          {footer}
-      </body>
-  )
+    <body>
+      {header}
+      <main>{children}</main>
+      {footer}
+    </body>
+  );
 }
-

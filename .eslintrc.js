@@ -4,8 +4,8 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'next',
     'airbnb',
+    'next',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
@@ -27,5 +27,14 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'react'],
-  rules: {},
+  rules: {
+    'import/extensions': 'off',
+    'import/prefer-default-export': 'off',
+    'no-shadow': 'off',
+    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'react/function-component-definition': 'off',
+  },
 };

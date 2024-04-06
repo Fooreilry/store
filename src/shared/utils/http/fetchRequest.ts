@@ -1,6 +1,1 @@
-
-
-class fetchRequest {
-
-}
-
+class fetchRequest {}
