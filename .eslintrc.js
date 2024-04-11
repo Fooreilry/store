@@ -36,5 +36,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'react/function-component-definition': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'no-restricted-syntax': 'off',
+    'class-methods-use-this': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
