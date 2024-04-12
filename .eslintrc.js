@@ -41,6 +41,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'react/button-has-type': 'warn',
     'react/require-default-props': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'prettier/prettier': [
       'error',
       {
