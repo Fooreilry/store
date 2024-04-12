@@ -1,3 +1,10 @@
+import { Button } from '@/src/shared/ui/Button';
+
 export default function HomePage() {
-  return <main>Home</main>;
+  return (
+    <main>
+      <Button>Button</Button>
+      <Button variant="secondary">Button</Button>
+    </main>
+  );
 }

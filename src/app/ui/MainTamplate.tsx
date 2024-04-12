@@ -1,21 +1,16 @@
 'use client';
 
 import React from 'react';
+import { ThemeProvider } from '../providers/ThemeProvider';
 
-export function MainTamplate({
-  header,
-  footer,
-  children,
-}: {
-  children: React.ReactNode;
-  header: React.ReactNode;
-  footer: React.ReactNode;
-}) {
+export function MainTamplate({ children }: { children: React.ReactNode }) {
   return (
-    <body>
-      {header}
-      <main>{children}</main>
-      {footer}
-    </body>
+    <ThemeProvider>
+      <body className="app light">
+        <header>Header</header>
+        {children}
+        <footer>Footer</footer>
+      </body>
+    </ThemeProvider>
   );
 }

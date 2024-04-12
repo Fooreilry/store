@@ -39,6 +39,8 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-restricted-syntax': 'off',
     'class-methods-use-this': 'off',
+    'react/button-has-type': 'warn',
+    'react/require-default-props': 'off',
     'prettier/prettier': [
       'error',
       {
