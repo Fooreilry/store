@@ -1,6 +1,9 @@
 :root {
   /* font */
   --font-family: 'Nunito', sans-serif;
+  --font-size-xs: 14px;
+  --font-line-xs: 22px;
+  --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family);
   --font-size-s: 16px;
   --font-line-s: 24px;
   --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family);

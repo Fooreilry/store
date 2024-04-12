@@ -1,3 +1,3 @@
-import { Button } from './ui/Button';
+import { Button, ButtonVariants } from './ui/Button';
 
-export { Button };
+export { Button, ButtonVariants };
