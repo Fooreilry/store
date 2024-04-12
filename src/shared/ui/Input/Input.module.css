@@ -1,0 +1,37 @@
+.input {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.normal {
+  border: 2px solid #7b2eda;
+}
+
+.normal:focus {
+  outline: #572297;
+  border-color: #572297;
+}
+
+.search {
+  background-color: #eaeaea;
+  border: 2px solid #eaeaea;
+}
+
+.search:focus {
+  outline: #eaeaea;
+  border-color: #eaeaea;
+}
+
+.inputIcon {
+  padding: 10px;
+  padding-right: 45px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  margin-left: -34px;
+  margin-top: 10px;
+  color: #a4a4a4;
+}

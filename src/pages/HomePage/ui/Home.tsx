@@ -1,10 +1,15 @@
-import { Button } from '@/src/shared/ui/Button';
+import { Input } from '@/src/shared/ui/Input/Input';
 
 export default function HomePage() {
   return (
     <main>
-      <Button>Button</Button>
-      <Button variant="secondary">Button</Button>
+      <div style={{ position: 'relative' }}>
+        <Input type="text" placeholder="прт" />
+      </div>
+
+      <br />
+      <br />
+      <Input type="text" placeholder="прт" variants="search" />
     </main>
   );
 }
