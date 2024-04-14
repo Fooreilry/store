@@ -43,6 +43,14 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': 'off',
     'global-require': 'warn',
+    'react/prop-types': 'warn',
+    'default-case': 'warn',
+    'object-shorthand': 'warn',
+    'no-use-before-define': 'warn',
+    'react/jsx-no-constructed-context-values': 'off',
+    'consistent-return': 'off',
+    'react/no-unstable-nested-components': 'warn',
+    'jsx-a11y/heading-has-content': 'off',
     'prettier/prettier': [
       'error',
       {
