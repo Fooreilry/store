@@ -1,10 +1,13 @@
-@import url('./normalize.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('./variables/variables.css');
-@import url('./theme/dark.css');
-@import url('./theme/light.css');
 
-.app {
-  font: var(--font-s);
-  background: var(--bg-color);
-  color: var(--primary-font-color);
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

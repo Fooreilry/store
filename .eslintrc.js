@@ -42,6 +42,7 @@ module.exports = {
     'react/button-has-type': 'warn',
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'global-require': 'warn',
     'prettier/prettier': [
       'error',
       {
