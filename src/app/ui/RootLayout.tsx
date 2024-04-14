@@ -1,7 +1,6 @@
 import { Nunito } from 'next/font/google';
 import React from 'react';
 import '../styles/globals.css';
-import { MainTamplate } from './MainTamplate';
 
 const nunito = Nunito({
   weight: ['400', '700'],
@@ -14,7 +13,11 @@ const nunito = Nunito({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru" className={nunito.className}>
-      <MainTamplate>{children}</MainTamplate>
+      <body className="app">
+        <header>Header</header>
+        {children}
+        <footer>Footer</footer>
+      </body>
     </html>
   );
 }
