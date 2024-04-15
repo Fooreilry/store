@@ -11,3 +11,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+main {
+  height: calc(100vh - 66px);
+  padding: 0 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
