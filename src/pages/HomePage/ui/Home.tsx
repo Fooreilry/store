@@ -1,3 +1,9 @@
+import { InfoBlock } from '@/src/widgets/InfoBlock/InfoBlock';
+
 export default function HomePage() {
-  return <main />;
+  return (
+    <main className="p-0">
+      <InfoBlock />
+    </main>
+  );
 }
