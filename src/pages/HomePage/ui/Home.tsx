@@ -6,17 +6,19 @@ import { CategoriesList } from '@/src/widgets/CategoriesList/CategoriesList';
 export default function HomePage() {
   return (
     <main className="p-0">
-      <InfoBlock />
-      <section className="mb-10">
-        <h2 className="text-2xl border-b-2 border-primary pb-2 max-w-[500px] min-w-[300px] font-bold">
+      <section className=" mt-6 xl:mt-10">
+        <InfoBlock />
+      </section>
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5">
+        <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
           Популярные товары
         </h2>
         <article className="mt-8">
           <ProductList />
         </article>
       </section>
-      <section className="mb-10 pl-[40px] pr-[40px]">
-        <h2 className="text-2xl border-b-2 border-primary pb-2 max-w-[500px] min-w-[300px] font-bold">
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5">
+        <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
           Популярные категории
         </h2>
         <article className="mt-8">
