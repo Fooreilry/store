@@ -22,6 +22,9 @@ export const AdvantageList = () => {
       <li>
         <AdvantageCard titleAdvantage="Скорость" iconAdvantage={<Minus />} />
       </li>
+      <li>
+        <AdvantageCard titleAdvantage="Улыбка" iconAdvantage={<Minus />} />
+      </li>
     </ul>
   );
 };
