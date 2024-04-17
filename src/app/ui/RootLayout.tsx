@@ -1,8 +1,9 @@
 import { Nunito } from 'next/font/google';
 import { Header } from '@/src/widgets/Header/Header';
-import React from 'react';
+import React, { Suspense } from 'react';
 import '../styles/globals.css';
 import { Footer } from '@/src/widgets/Footer/Footer';
+import Loading from '@/app/loading';
 import { ThemeProvider } from '../providers/ThemeProvider/ThemeProvider';
 
 const nunito = Nunito({
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="app">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
           <Footer />
         </ThemeProvider>
       </body>
