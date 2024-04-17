@@ -1,7 +1,7 @@
 import { ProductList } from '@/src/widgets/ProductList/ProductList';
-
 import { InfoBlock } from '@/src/widgets/InfoBlock/InfoBlock';
 import { CategoriesList } from '@/src/widgets/CategoriesList/CategoriesList';
+import { AdvantageList } from '@/src/widgets/AdvantageList/AdvantageList';
 
 export default function HomePage() {
   return (
@@ -25,6 +25,15 @@ export default function HomePage() {
           <CategoriesList />
         </article>
       </section>
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5 bg-primary">
+        <h2 className="text-white text-xl text-center md:text-start md:text-2xl pt-5 w-full md:w-[500px] font-bold">
+          НАШИ ПРЕИМУЩЕСТВА
+        </h2>
+        <article className="mt-5 pb-10">
+          <AdvantageList />
+        </article>
+      </section>
+      <br />
     </main>
   );
 }
