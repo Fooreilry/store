@@ -2,6 +2,8 @@
 
 import { useMount } from '@/src/shared/hooks/useMount/useMount';
 import { Button } from '@/src/shared/ui/button';
+import { Skeleton } from '@/src/shared/ui/skeleton';
+import { cn } from '@/src/shared/utils';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
@@ -14,10 +16,10 @@ export const ThemeButton = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
   if (!isMounted) {
-    return null;
+    return <Skeleton className="w-10 h-10" />;
   }
   return (
-    <Button variant="ghost" size="icon" onClick={toggleTheme}>
+    <Button variant="ghost" className={cn()} onClick={toggleTheme}>
       {theme === 'dark' ? <Sun /> : <Moon />}
     </Button>
   );

@@ -13,7 +13,7 @@ export const RouteLink = ({ name, path, className }: { name: string; path: strin
   return (
     <Link
       className={cn(
-        'text-sm font-medium hover:text-primary py-5 px-3 font-normal block text-base text-nowrap',
+        'hover:text-primary py-5 font-normal block text-base text-nowrap',
         isActive && 'text-primary border-b-2 border-primary bg-primary/10',
         className,
       )}
