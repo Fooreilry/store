@@ -27,6 +27,16 @@
   grid-row-start: 2;
 }
 
+@media screen and (min-width: 3001px) and (max-width: 4000px) {
+  .InfoBlockSection {
+    min-height: 1000px;
+  }
+
+  .InfoBlockDiv {
+    min-height: 1000px;
+  }
+}
+
 @media screen and (min-width: 2200px) and (max-width: 3000px) {
   .InfoBlockSection {
     min-height: 800px;
