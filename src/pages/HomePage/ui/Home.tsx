@@ -10,15 +10,15 @@ export default function HomePage() {
       <section className=" mt-6 xl:mt-10">
         <InfoBlock />
       </section>
-      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5">
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5 ">
         <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
           Популярные товары
         </h2>
-        <article className="mt-8">
+        <article className="mt-8 max-w-full">
           <ProductList />
         </article>
       </section>
-      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5">
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5">
         <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
           Популярные категории
         </h2>
@@ -26,7 +26,7 @@ export default function HomePage() {
           <CategoriesList />
         </article>
       </section>
-      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5 bg-primary">
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5 bg-primary">
         <h2 className="text-white text-xl text-center md:text-start md:text-2xl pt-5 w-full md:w-[500px] font-bold">
           НАШИ ПРЕИМУЩЕСТВА
         </h2>
@@ -34,7 +34,7 @@ export default function HomePage() {
           <AdvantageList />
         </article>
       </section>
-      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:5">
+      <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5">
         <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
           Популярные категории
         </h2>

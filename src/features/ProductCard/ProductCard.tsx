@@ -1,13 +1,14 @@
 import { Counter } from '@/src/shared/ui/Counter/Counter';
 import { Button } from '@/src/shared/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/src/shared/ui/card';
+import { cn } from '@/src/shared/utils';
 import { MessageCircle, Star } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
-export const ProductCard = () => {
+export const ProductCard = ({ className = '' }: { className?: string }) => {
   return (
-    <Card className=" max-w-full hover:shadow-md bg-secondary/30">
+    <Card className={cn('max-w-full hover:shadow-md bg-secondary/30', className)}>
       <CardContent className="pb-0 pt-5 px-3">
         <div className=" h-auto w-48 mx-auto">
           <Image src="/Жаба.png" alt="Жаба" width={200} height={200} />

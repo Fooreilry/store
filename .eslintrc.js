@@ -51,6 +51,7 @@ module.exports = {
     'consistent-return': 'off',
     'react/no-unstable-nested-components': 'warn',
     'jsx-a11y/heading-has-content': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
     'prettier/prettier': [
       'error',
       {
