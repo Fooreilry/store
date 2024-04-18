@@ -36,7 +36,7 @@ export default function HomePage() {
       </section>
       <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5">
         <h2 className=" text-xl text-center md:text-start md:text-2xl border-b-2 border-primary pb-2  w-full md:w-[500px] font-bold">
-          Популярные категории
+          Бренды
         </h2>
         <article className="mt-8 pb-10">
           <BrandList />
