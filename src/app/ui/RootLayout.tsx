@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="app">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>

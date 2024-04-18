@@ -14,7 +14,7 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
         className={cn(
           className,
           state ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full',
-          'absolute top-0 inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out xl:bg-none bg-secondary xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:bg-transparent xl:w-auto xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center',
+          ' h-dvh xl:h-full  absolute top-0 inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out xl:bg-none bg-secondary xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:bg-transparent xl:w-auto xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center',
         )}
       >
         <div className=" w-full flex justify-end pb-4">
