@@ -1,0 +1,44 @@
+.card {
+  background-color: rgb(243 244 246 / 30%);
+}
+.card:hover {
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media screen and (min-width: 300px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 709px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .card {
+    max-width: 330px;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  .card {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 2600px) {
+  .card {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 3700px) {
+  .card {
+    max-width: 560px;
+  }
+}
