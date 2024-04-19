@@ -1,8 +1,10 @@
-import { cn } from '@/src/shared/utils';
-import React from 'react';
+'use client';
+
 import { AdvantageCard } from '@/src/shared/ui/AdvantageCard/AdvantageCard';
-import { Minus } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem } from '@/src/shared/ui/carousel';
+import { cn } from '@/src/shared/utils';
+import Autoplay from 'embla-carousel-autoplay';
+import { Minus } from 'lucide-react';
 import cls from './AdvantageList.module.css';
 
 export const AdvantageList = () => {
@@ -11,6 +13,12 @@ export const AdvantageList = () => {
       opts={{
         align: 'start',
       }}
+      plugins={[
+        Autoplay({
+          delay: 10000,
+          stopOnInteraction: false,
+        }),
+      ]}
       className={cn(cls.AdvantageList)}
     >
       <CarouselContent className="w-full">
