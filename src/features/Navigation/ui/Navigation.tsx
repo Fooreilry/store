@@ -4,6 +4,7 @@ import { Button } from '@/src/shared/ui/button';
 import { cn } from '@/src/shared/utils';
 import { Heart, Menu, ShoppingCart, X } from 'lucide-react';
 import { useState } from 'react';
+import { ModalLoginAndRegistration } from '../../ModalLoginAndRegistration/ModalLoginAndRegistration';
 import { NavigationLinks } from './NavigationLinks';
 
 export const Navigation = ({ className = '' }: { className?: string }) => {
@@ -46,7 +47,7 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
             </Button>
           </li>
           <li className="order-1 xl:order-3">
-            <Button className=" font-bold ">Войти</Button>
+            <ModalLoginAndRegistration />
           </li>
         </ul>
       </div>
