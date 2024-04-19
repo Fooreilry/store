@@ -1,7 +1,9 @@
-import { cn } from '@/src/shared/utils';
-import React from 'react';
+'use client';
+
 import { BrandCard } from '@/src/shared/ui/BrandCard/BrandCard';
 import { Carousel, CarouselContent, CarouselItem } from '@/src/shared/ui/carousel';
+import { cn } from '@/src/shared/utils';
+import Autoplay from 'embla-carousel-autoplay';
 import cls from './BrandList.module.css';
 
 export const BrandList = ({ className = '' }: { className?: string }) => {
@@ -10,6 +12,12 @@ export const BrandList = ({ className = '' }: { className?: string }) => {
       opts={{
         align: 'start',
       }}
+      plugins={[
+        Autoplay({
+          delay: 10000,
+          stopOnInteraction: false,
+        }),
+      ]}
       className={cn(cls.BrandList, className)}
     >
       <CarouselContent className="w-full">
