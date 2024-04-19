@@ -1,8 +1,6 @@
 import { Navigation } from '@/src/features/Navigation';
-import { ProductSearch } from '@/src/features/ProductSearch/ProductSearch';
+import ProductSearch from '@/src/features/ProductSearch/ProductSearch';
 import { ThemeButton } from '@/src/features/ThemeButton/ThemeButton';
-import { Button } from '@/src/shared/ui/button';
-import { Heart, ShoppingCart } from 'lucide-react';
 
 export const Header = () => {
   return (
