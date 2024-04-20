@@ -89,3 +89,8 @@ class HttpRequest {
     });
   }
 }
+
+export const api = new HttpRequest({
+  baseUrl: 'http://localhost:3000',
+  headers: { 'Content-Type': 'application/json' },
+});

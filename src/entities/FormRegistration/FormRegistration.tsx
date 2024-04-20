@@ -1,9 +1,12 @@
+'use client';
+
 import { Button } from '@/src/shared/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/src/shared/ui/form';
 import { Input } from '@/src/shared/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { userRegustration } from './api/userRegistration';
 
 const formSchema = z
   .object({
@@ -31,8 +34,13 @@ export const FormRegistration = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    form.reset();
+    const { username, email, password } = values;
+
+    const { data, success, statusText, statusCode } = await userRegustration({ params: { username, email, password } });
+
+    console.log(data, success, statusText, statusCode);
+
+    // form.reset();
   }
 
   return (
