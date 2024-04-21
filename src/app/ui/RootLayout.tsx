@@ -1,10 +1,9 @@
-import { Nunito } from 'next/font/google';
-import { Header } from '@/src/widgets/Header/Header';
-import React, { Suspense } from 'react';
-import '../styles/globals.css';
 import { Footer } from '@/src/widgets/Footer/Footer';
-import Loading from '@/app/loading';
+import { Header } from '@/src/widgets/Header/Header';
+import { Nunito } from 'next/font/google';
+import React from 'react';
 import { ThemeProvider } from '../providers/ThemeProvider/ThemeProvider';
+import '../styles/globals.css';
 
 const nunito = Nunito({
   weight: ['400', '700'],

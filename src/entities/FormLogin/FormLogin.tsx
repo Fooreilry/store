@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/src/shared/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/src/shared/ui/form';
 import { Input } from '@/src/shared/ui/input';
@@ -59,10 +61,10 @@ export const FormLogin = () => {
           <Button type="submit">Войти</Button>
         </div>
         <div className="text-center">
-          <Button type="button" className="bg-white text-primary hover:bg-gray-200">
+          <Button type="button" variant="outline" className="bg-white text-primary hover:bg-gray-200 font-bold">
             G
           </Button>
-          <Button type="button" className="ml-5 bg-white text-primary hover:bg-gray-200">
+          <Button type="button" variant="outline" className="ml-5 bg-white text-primary hover:bg-gray-200 font-bold">
             VK
           </Button>
         </div>
