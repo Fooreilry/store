@@ -1,13 +1,16 @@
-// import prisma from '@/src/shared/Configs/PrismaClient/PrismaClient';
-// import { PrismaAdapter } from '@auth/prisma-adapter';
-// import NextAuth from 'next-auth/next';
+import CredentialsConfig from '@/src/shared/Configs/AuthProviders/CredentialsConfig';
+import NextAuth from 'next-auth/next';
 
-// const handler = NextAuth({
-//   adapter: PrismaAdapter(prisma),
-//   providers: [],
-//   pages: {
-//     signIn: '/signin',
-//   },
-// });
+const handler = NextAuth({
+  providers: [CredentialsConfig],
+  secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: 'jwt',
+  },
+  pages: {
+    signIn: '/signin',
+  },
+  debug: process.env.NODE_ENV !== 'production',
+});
 
-// export { handler as GET, handler as POST };
+export { handler as GET, handler as POST };

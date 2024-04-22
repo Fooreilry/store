@@ -4,11 +4,13 @@ import { Button } from '@/src/shared/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/src/shared/ui/form';
 import { Input } from '@/src/shared/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 const formSchema = z.object({
-  username: z.string().trim().min(5, {
+  email: z.string().email().trim().min(5, {
     message: 'Логин слишком маленький',
   }),
   password: z.string().trim().min(5, { message: 'Пароль слишком маленький' }),
@@ -18,13 +20,23 @@ export const FormLogin = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
+      email: '',
       password: '',
     },
   });
 
+  const router = useRouter();
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const { email, password } = values;
+    const login = await signIn('credentials', { email, password, redirect: false });
+
+    if (!login?.ok) {
+      console.log(login?.error);
+      return;
+    }
+
+    router.push('/');
     form.reset();
   }
 
@@ -33,11 +45,11 @@ export const FormLogin = () => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="username"
+          name="email"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input type="text" placeholder="Логин" {...field} className="mt-4" />
+                <Input type="text" placeholder="Email" {...field} className="mt-4" />
               </FormControl>
               <FormDescription />
               <FormMessage />

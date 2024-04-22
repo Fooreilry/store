@@ -1,14 +1,19 @@
 'use client';
 
 import { Button } from '@/src/shared/ui/button';
+import { PopoverContent, PopoverTrigger } from '@/src/shared/ui/popover';
+import { Skeleton } from '@/src/shared/ui/skeleton';
 import { cn } from '@/src/shared/utils';
+import { Popover } from '@radix-ui/react-popover';
 import { Heart, Menu, ShoppingCart, X } from 'lucide-react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { NavigationLinks } from './NavigationLinks';
 
 export const Navigation = ({ className = '' }: { className?: string }) => {
   const [isShow, isSetShow] = useState(false);
+  const { data, status } = useSession();
 
   const onOpen = () => {
     document.body.style.overflow = 'hidden';
@@ -18,6 +23,15 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
   const onClose = () => {
     document.body.style.overflow = 'auto';
     isSetShow(false);
+  };
+
+  const onLogout = async () => {
+    if (status !== 'authenticated') {
+      return;
+    }
+
+    await signOut({ callbackUrl: '/signin' });
+    onClose();
   };
 
   return (
@@ -47,11 +61,35 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
             </Button>
           </li>
           <li className="order-1 xl:order-3">
-            <Link href="/signin">
-              <Button onClick={onClose} className="font-bold ">
-                Войти
-              </Button>
-            </Link>
+            {status === 'loading' && <Skeleton className="w-20 h-9" />}
+            {status === 'authenticated' && (
+              <Popover>
+                <PopoverTrigger>
+                  <p>{data.user?.name}</p>
+                </PopoverTrigger>
+                <PopoverContent className="p-2 max-w-48 flex flex-col ">
+                  <Button variant="link" className=" hover:no-underline text-base text-none">
+                    Профиль
+                  </Button>
+                  <Button variant="link" className=" hover:no-underline text-base text-none">
+                    Админ панель
+                  </Button>
+                  <Button variant="link" className=" hover:no-underline text-base text-none">
+                    Заказы
+                  </Button>
+                  <Button variant="link" onClick={onLogout} className="text-red-600 text-base hover:no-underline">
+                    Выход
+                  </Button>
+                </PopoverContent>
+              </Popover>
+            )}
+            {status === 'unauthenticated' && (
+              <Link href="/signin">
+                <Button onClick={onClose} className="font-bold ">
+                  Войти
+                </Button>
+              </Link>
+            )}
           </li>
         </ul>
       </div>

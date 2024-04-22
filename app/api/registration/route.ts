@@ -4,14 +4,17 @@ import bcrypt from 'bcrypt';
 interface User {
   email: string;
   password: string;
-  username: string;
+  name: string;
 }
 
 export async function POST(request: Request) {
   console.log(await request.bodyUsed);
 
-  const { email, password, username }: User = await request.json();
-  console.log(email, password, username);
+  const { email, password, username }: { email: string; password: string; username: string } = await request.json();
+
+  if (!email || !password || !username) {
+    return Response.json('Заполните все поля', { status: 400 });
+  }
 
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
@@ -20,11 +23,10 @@ export async function POST(request: Request) {
     const user = await prisma.user.create({
       data: {
         email,
-        username,
+        name: username,
         password: hashedPassword,
       } as User,
     });
-    console.log(user);
 
     if (!user) {
       return Response.json('Ошибка в базе данных', { status: 401 });
