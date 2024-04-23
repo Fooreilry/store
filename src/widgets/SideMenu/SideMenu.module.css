@@ -1,0 +1,114 @@
+.sidebar {
+  width: 250px;
+  background-color: rgb(253, 170, 231);
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.sidebar_close {
+  width: 54px;
+  background-color: rgb(253, 170, 231);
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.icon_open {
+  width: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.icon_close {
+  width: 18px;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_items {
+  white-space: nowrap;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+}
+
+.active {
+  background-color: #99337c;
+  color: #000000;
+}
+
+.menu_items:hover {
+  background-color: #99337c;
+}
+
+.button {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button_open {
+  width: 250px;
+  overflow: hidden;
+}
+
+.button_close {
+  width: 54px;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.sidebar .button:hover {
+  background-color: #99337c;
+  width: 250px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar_close .button:hover {
+  background-color: #99337c;
+  width: 54px;
+  transition: width 0.3s ease-in-out;
+}
+
+.hide {
+  gap: 5px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+/* Анимация закрытие & открытие */
+
+.sidebar_close .menu_items span {
+  animation: showText 0.3s ease-in-out forwards;
+}
+
+.sidebar_open .menu_items span {
+  animation: hideText 0.3s ease-in-out forwards;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
