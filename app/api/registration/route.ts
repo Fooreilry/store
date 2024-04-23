@@ -8,8 +8,6 @@ interface User {
 }
 
 export async function POST(request: Request) {
-  console.log(await request.bodyUsed);
-
   const { email, password, username }: { email: string; password: string; username: string } = await request.json();
 
   if (!email || !password || !username) {

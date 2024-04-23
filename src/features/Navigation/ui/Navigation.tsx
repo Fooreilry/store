@@ -13,7 +13,7 @@ import { NavigationLinks } from './NavigationLinks';
 
 export const Navigation = ({ className = '' }: { className?: string }) => {
   const [isShow, isSetShow] = useState(false);
-  const { data, status } = useSession();
+  const { data: session, status } = useSession();
 
   const onOpen = () => {
     document.body.style.overflow = 'hidden';
@@ -65,7 +65,7 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
             {status === 'authenticated' && (
               <Popover>
                 <PopoverTrigger>
-                  <p>{data.user?.name}</p>
+                  <p>{session.user?.name}</p>
                 </PopoverTrigger>
                 <PopoverContent className="p-2 max-w-48 flex flex-col ">
                   <Button variant="link" className=" hover:no-underline text-base text-none">
