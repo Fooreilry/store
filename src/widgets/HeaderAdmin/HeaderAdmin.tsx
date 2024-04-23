@@ -1,5 +1,5 @@
 import { ThemeButton } from '@/src/features/ThemeButton/ThemeButton';
-import { SquareUserRound } from 'lucide-react';
+import { CircleUser } from 'lucide-react';
 import Link from 'next/link';
 
 export const HeaderAdmin = () => {
@@ -14,7 +14,7 @@ export const HeaderAdmin = () => {
 
       <div className="ml-auto px-0 md:px-5">
         <div className="flex">
-          <SquareUserRound />
+          <CircleUser />
           <p className="text-lg ml-2">User</p>
         </div>
       </div>
