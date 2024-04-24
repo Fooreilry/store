@@ -1,5 +1,6 @@
 'use client';
 
+import { RouterPath } from '@/src/shared/Configs/Routes/RouteConfig';
 import { Button } from '@/src/shared/ui/button';
 import { PopoverContent, PopoverTrigger } from '@/src/shared/ui/popover';
 import { Skeleton } from '@/src/shared/ui/skeleton';
@@ -51,14 +52,18 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
         <NavigationLinks closeMenu={onClose} />
         <ul className="flex gap-5 items-center mt-4  xl:mt-0">
           <li className="order-2 xl:order-1">
-            <Button size="icon" variant="ghost">
-              <ShoppingCart />
-            </Button>
+            <Link href={RouterPath.cart}>
+              <Button size="icon" variant="ghost">
+                <ShoppingCart />
+              </Button>
+            </Link>
           </li>
           <li className="order-3 xl:order-2">
-            <Button size="icon" variant="ghost">
-              <Heart className=" hover:stroke-rose-600 hover:fill-rose-600" />
-            </Button>
+            <Link href={RouterPath.favorite}>
+              <Button size="icon" variant="ghost">
+                <Heart className=" hover:stroke-rose-600 hover:fill-rose-600" />
+              </Button>
+            </Link>
           </li>
           <li className="order-1 xl:order-3">
             {status === 'loading' && <Skeleton className="w-20 h-9" />}
@@ -67,17 +72,27 @@ export const Navigation = ({ className = '' }: { className?: string }) => {
                 <PopoverTrigger>
                   <p>{session.user?.name}</p>
                 </PopoverTrigger>
-                <PopoverContent className="p-2 max-w-48 flex flex-col ">
-                  <Button variant="link" className=" hover:no-underline text-base text-none">
-                    Профиль
-                  </Button>
-                  <Button variant="link" className=" hover:no-underline text-base text-none">
-                    Админ панель
-                  </Button>
-                  <Button variant="link" className=" hover:no-underline text-base text-none">
-                    Заказы
-                  </Button>
-                  <Button variant="link" onClick={onLogout} className="text-red-600 text-base hover:no-underline">
+                <PopoverContent className="p-2 max-w-48 flex flex-col items-start ">
+                  <Link href={RouterPath.account}>
+                    <Button variant="link" className=" hover:no-underline text-base text-none hover:bg-secondary/20">
+                      Профиль
+                    </Button>
+                  </Link>
+                  <Link href={RouterPath.admin}>
+                    <Button variant="link" className=" hover:no-underline text-base text-none hover:bg-secondary/20">
+                      Админ панель
+                    </Button>
+                  </Link>
+                  <Link href={RouterPath.orders}>
+                    <Button variant="link" className=" hover:no-underline text-base text-none hover:bg-secondary/20">
+                      Заказы
+                    </Button>
+                  </Link>
+                  <Button
+                    variant="link"
+                    onClick={onLogout}
+                    className="text-red-600 text-base hover:no-underline hover:bg-secondary/20"
+                  >
                     Выход
                   </Button>
                 </PopoverContent>

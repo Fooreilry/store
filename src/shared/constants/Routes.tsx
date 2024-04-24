@@ -17,8 +17,4 @@ export const Routes = [
     name: 'О нас',
     path: RouterPath[RouteConfig.ABOUT],
   },
-  {
-    name: 'Корзина',
-    path: RouterPath[RouteConfig.CART],
-  },
 ];
