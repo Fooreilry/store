@@ -1,0 +1,41 @@
+.NewsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+@media screen and (min-width: 300px) {
+  .CarouselItem {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 716px) {
+  .CarouselItem {
+    flex-basis: 55%;
+  }
+}
+
+@media screen and (min-width: 869px) {
+  .CarouselItem {
+    flex-basis: 34%;
+  }
+}
+
+@media (min-width: 1156px) {
+  .CarouselItem {
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 1532px) {
+  .CarouselItem {
+    flex-basis: 20%;
+  }
+}
+
+@media (min-width: 1760px) {
+  .CarouselItem {
+    flex-basis: 16.8%;
+  }
+}
