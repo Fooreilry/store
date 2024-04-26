@@ -8,7 +8,7 @@ export const NewsList = ({ className = '' }: { className?: string }) => {
   return (
     <>
       <NewsFilters />
-      <ul className={cn(cls.NewsList, className)}>
+      <ul className={cn(cls.NewsList, 'mt-4', className)}>
         <li>
           <NewsCard />
         </li>

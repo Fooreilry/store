@@ -11,9 +11,11 @@ import { cn } from '@/src/shared/utils';
 
 export const NewsFilters = ({ className = '' }: { className?: string }) => {
   return (
-    <div className={cn('pt-4 pb-6 flex gap-5 justify-end', className)}>
+    <div
+      className={cn(' pt-2 md:pt-4 pb-4 flex gap-5 justify-end border-b sm:border-none border-secondary', className)}
+    >
       <Select>
-        <SelectTrigger className="w-[240px]">
+        <SelectTrigger className="w-full xs:w-[240px]">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
         <SelectContent>
@@ -28,7 +30,7 @@ export const NewsFilters = ({ className = '' }: { className?: string }) => {
         </SelectContent>
       </Select>
       <Select>
-        <SelectTrigger className="w-[240px]">
+        <SelectTrigger className="w-full xs:w-[240px]">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
         <SelectContent>

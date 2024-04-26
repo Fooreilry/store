@@ -11,7 +11,7 @@ export const Counter = ({ icon, value, className = '' }: CounterProps) => {
   return (
     <p className={cn('flex items-end gap-2', className)}>
       <span>{icon}</span>
-      <span className="font-bold leading-none">{value}</span>
+      <span className="font-bold text-lg leading-none">{value}</span>
     </p>
   );
 };

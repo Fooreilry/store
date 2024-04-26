@@ -24,9 +24,9 @@ const ProductSearch = () => {
         <SearchIcon />
       </Button>
       {isOpen && (
-        <div className=" bg-background w-full h-dvh min-w-[350px] block md:hidden absolute left-0 top-0">
+        <div className=" bg-background w-full h-dvh min-w-[350px] block md:hidden absolute left-0 top-0 z-50">
           <div className=" p-3">
-            <div className=" flex gap-2 items-center">
+            <div className=" flex gap-2 items-center border-b pb-4">
               <Search className="w-full" />
               <Button variant="ghost" className="flex items-center justify-center px-1" onClick={onClose}>
                 <X />

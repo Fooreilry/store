@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const NewsCard = ({ className = '' }: { className?: string }) => {
   return (
     <Card className={cn('mx-auto overflow-hidden rounded-lg bg-secondary/20 shadow p-0', className)}>
-      <Image src="/Жаба.png" className="w-full max-h-52" alt="Жаба" width={200} height={200} />
+      <Image src="/Жаба.png" className="w-full h-full max-h-[28vh] min-h-52" alt="Жаба" width={200} height={200} />
       <CardHeader>
         <h3 className="text-2xl font-medium">Migrating to Sailboat UI</h3>
       </CardHeader>

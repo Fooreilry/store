@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/src/shared/ui/card';
 import Image from 'next/image';
-import React from 'react';
 
 export const CategoriesCard = ({ titleCategory, imageCategory }: { titleCategory: string; imageCategory: string }) => {
   return (
@@ -11,7 +10,7 @@ export const CategoriesCard = ({ titleCategory, imageCategory }: { titleCategory
         </div>
       </CardContent>
       <CardHeader className="py-[10px] px-3">
-        <CardTitle className=" text-lg text-center">{titleCategory}</CardTitle>
+        <CardTitle className=" text-xl py-4 text-center">{titleCategory}</CardTitle>
       </CardHeader>
     </Card>
   );
