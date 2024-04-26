@@ -6,8 +6,8 @@ export const Routes = [
     path: RouterPath[RouteConfig.MAIN],
   },
   {
-    name: 'Категории',
-    path: RouterPath[RouteConfig.CATEGORY],
+    name: 'Каталог',
+    path: RouterPath[RouteConfig.CATALOG],
   },
   {
     name: 'Новости',

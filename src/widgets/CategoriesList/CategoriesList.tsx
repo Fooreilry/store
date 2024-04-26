@@ -1,8 +1,9 @@
 import { CategoriesCard } from '@/src/features/CategoriesCard/CategoriesCard';
-import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/src/shared/ui/carousel';
+import { cn } from '@/src/shared/utils';
+import cls from './CategoriesList.module.css';
 
-export const CategoriesList = () => {
+export const SliderCategoriesList = () => {
   return (
     <Carousel className=" mx-10 px-4 xl:mx-10 xl:px-3 2xl:mx-8 2xl:px-2 md:mx-16 md:px-6 sm:mx-36 sm:px-10 xs:mx-12 xs:px-10 2sm:mx-20 2sm:px-10">
       <CarouselContent>
@@ -40,5 +41,21 @@ export const CategoriesList = () => {
       <CarouselPrevious className=" w-12 h-12" />
       <CarouselNext className=" w-12 h-12" />
     </Carousel>
+  );
+};
+
+export const CategoriesList = ({ className = '' }: { className?: string }) => {
+  return (
+    <ul className={cn(cls.CategoryList, className)}>
+      <li>
+        <CategoriesCard titleCategory="Ноутбуки" imageCategory="/2_14-128x128.png" />
+      </li>
+      <li>
+        <CategoriesCard titleCategory="Телевизоры" imageCategory="/2_14-128x128.png" />
+      </li>
+      <li>
+        <CategoriesCard titleCategory="Переферия" imageCategory="/2_14-128x128.png" />
+      </li>
+    </ul>
   );
 };

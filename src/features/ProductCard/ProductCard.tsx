@@ -26,8 +26,8 @@ export const ProductCard = ({ className = '' }: { className?: string }) => {
       <CardFooter className="pt-0 pb-5 px-3">
         <div className="flex justify-between w-full items-center">
           <p className="text-base font-bold flex flex-col">
-            <span className=" text-primary leading-none ml-3">$ 10.00</span>
-            <span>$ 12.00</span>
+            <span className="text-sm text-primary leading-none ml-3 line-through">$ 12.00</span>
+            <span>$ 10.00</span>
           </p>
           <Button className="text-base h-8 font-bold">Купить</Button>
         </div>

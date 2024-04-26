@@ -1,6 +1,6 @@
 export const RouteConfig = {
   MAIN: 'main',
-  CATEGORY: 'category',
+  CATALOG: 'catalog',
   NEWS: 'news',
   ABOUT: 'about',
   CART: 'cart',
@@ -15,7 +15,7 @@ export type RouteConfigType = ConstType<typeof RouteConfig>;
 
 export const RouterPath: Record<RouteConfigType, string> = {
   [RouteConfig.MAIN]: '/',
-  [RouteConfig.CATEGORY]: '/category',
+  [RouteConfig.CATALOG]: '/catalog',
   [RouteConfig.NEWS]: '/news',
   [RouteConfig.ABOUT]: '/about',
   [RouteConfig.CART]: '/cart',

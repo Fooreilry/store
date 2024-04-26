@@ -1,6 +1,6 @@
 import { ProductList } from '@/src/widgets/ProductList/ProductList';
 import { InfoBlock } from '@/src/widgets/InfoBlock/InfoBlock';
-import { CategoriesList } from '@/src/widgets/CategoriesList/CategoriesList';
+import { SliderCategoriesList } from '@/src/widgets/CategoriesList/CategoriesList';
 import { AdvantageList } from '@/src/widgets/AdvantageList/AdvantageList';
 import { BrandList } from '@/src/widgets/BrandList/BrandList';
 
@@ -23,7 +23,7 @@ export default function HomePage() {
           Популярные категории
         </h2>
         <article className="mt-8">
-          <CategoriesList />
+          <SliderCategoriesList />
         </article>
       </section>
       <section className="mt-6 xl:mt-10 px-4 xl:px-10 md:px-5 bg-primary">
