@@ -52,6 +52,7 @@ module.exports = {
     'react/no-unstable-nested-components': 'warn',
     'jsx-a11y/heading-has-content': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    'jsx-a11y/label-has-associated-control': 'warn',
     'prettier/prettier': [
       'error',
       {
