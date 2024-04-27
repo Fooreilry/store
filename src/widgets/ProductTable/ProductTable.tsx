@@ -42,7 +42,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: 'price',
     header: 'Цена',
     cell: ({ row }) => {
-      return `${row.getValue<number>('price')} ₽`;
+      return `${row.getValue<string>('price')} ₽`;
     },
   },
   {
@@ -116,7 +116,7 @@ export function ProductTable<TData, TValue>({ columns, data }: DataTableProps<TD
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                Результаты не найдены
               </TableCell>
             </TableRow>
           )}

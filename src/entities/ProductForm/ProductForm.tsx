@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 
+import { FormType } from '@/src/app/types/FormData';
 import { ImageUpload } from '@/src/shared/ui/ImageUpload/ImageUpload';
 import { Button } from '@/src/shared/ui/button';
 import { Checkbox } from '@/src/shared/ui/checkbox';
@@ -23,7 +24,7 @@ const formSchema = z.object({
   isActive: z.boolean().default(true),
 });
 
-export const ProductForm = () => {
+export const ProductForm = ({ formType }: { formType: FormType }) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
