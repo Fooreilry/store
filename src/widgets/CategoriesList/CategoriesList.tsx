@@ -1,6 +1,7 @@
 import { CategoriesCard } from '@/src/features/CategoriesCard/CategoriesCard';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/src/shared/ui/carousel';
 import { cn } from '@/src/shared/utils';
+import Link from 'next/link';
 import cls from './CategoriesList.module.css';
 
 export const SliderCategoriesList = () => {
@@ -48,7 +49,9 @@ export const CategoriesList = ({ className = '' }: { className?: string }) => {
   return (
     <ul className={cn(cls.CategoryList, className)}>
       <li>
-        <CategoriesCard titleCategory="Ноутбуки" imageCategory="/2_14-128x128.png" />
+        <Link href="/catalog/notebook">
+          <CategoriesCard titleCategory="Ноутбуки" imageCategory="/2_14-128x128.png" />
+        </Link>
       </li>
       <li>
         <CategoriesCard titleCategory="Телевизоры" imageCategory="/2_14-128x128.png" />
