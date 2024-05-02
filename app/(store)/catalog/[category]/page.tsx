@@ -1,7 +1,7 @@
 import { ProductCard } from '@/src/features/ProductCard/ProductCard';
 import { Button } from '@/src/shared/ui/button';
 import { Input } from '@/src/shared/ui/input';
-
+// ТОDO: рефакторин
 export default async function page({ params }: { params: { category: string } }) {
   const { category } = params;
   console.log(category);
