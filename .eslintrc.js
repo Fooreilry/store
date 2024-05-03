@@ -1,4 +1,12 @@
 module.exports = {
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['.'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   env: {
     browser: true,
     es2021: true,

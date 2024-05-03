@@ -1,0 +1,12 @@
+.divMain {
+  min-height: calc(100vh - 70px);
+  display: flex;
+}
+
+.div {
+  width: calc(100% - 250px);
+}
+
+.divMini {
+  width: calc(100% - 54px);
+}
