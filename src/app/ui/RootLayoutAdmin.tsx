@@ -1,10 +1,9 @@
 import { HeaderAdmin } from '@/src/widgets/HeaderAdmin/HeaderAdmin';
-import Sidebar from '@/src/widgets/SideMenu';
 import { Nunito } from 'next/font/google';
 import React from 'react';
 import { ThemeProvider } from '../providers/ThemeProvider/ThemeProvider';
 import '../styles/globals.css';
-import styles from './Root.module.css';
+import ContainerForPages from './ContainerForPages/ContainerForPages';
 
 const nunito = Nunito({
   weight: ['400', '700'],
@@ -20,10 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="app">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <HeaderAdmin />
-          <div className={styles.div}>
-            <Sidebar />
-            {children}
-          </div>
+          <ContainerForPages childrenPage={children} />
         </ThemeProvider>
       </body>
     </html>
