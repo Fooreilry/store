@@ -1,0 +1,34 @@
+.divFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.divButton {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .divFlex {
+    display: block;
+  }
+  .divSocialNetwork {
+    margin-top: 4px;
+    display: flex;
+    padding-top: 3px;
+  }
+  .divButton {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 697px) {
+  .divButton {
+    margin-left: 0;
+  }
+  .divSocialNetwork {
+    display: block;
+    padding-top: 0px;
+  }
+}
