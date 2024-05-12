@@ -25,42 +25,32 @@ export const AdvantageList = () => {
         <>
           <CarouselItem key={1} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Яркий цвет" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Скорость дотавки" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
           <CarouselItem key={2} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Разнообразие" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Разнообразие выбора" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
           <CarouselItem key={3} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Высота прыжка" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Цена" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
           <CarouselItem key={4} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Размеры" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Качество" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
           <CarouselItem key={5} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Скорость" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Быстрый обмен и возврат" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
           <CarouselItem key={6} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <AdvantageCard titleAdvantage="Улыбка" iconAdvantage={<Minus />} />
-            </div>
-          </CarouselItem>
-          <CarouselItem key={7} className={cn(cls.CarouselItem)}>
-            <div className="p-1">
-              <AdvantageCard titleAdvantage="Пупырки" iconAdvantage={<Minus />} />
-            </div>
-          </CarouselItem>
-          <CarouselItem key={8} className={cn(cls.CarouselItem)}>
-            <div className="p-1">
-              <AdvantageCard titleAdvantage="Гены" iconAdvantage={<Minus />} />
+              <AdvantageCard titleAdvantage="Надёжность" iconAdvantage={<Minus />} />
             </div>
           </CarouselItem>
         </>
