@@ -29,37 +29,42 @@ export const BrandList = ({ className = '' }: { className?: string }) => {
           </CarouselItem>
           <CarouselItem key={2} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/intel_PNG11.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={3} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/amd.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={4} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/razer-logo-B4E375B409-seeklogo.com.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={5} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/Logitech.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={6} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/apple.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={7} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/samsung.png" width={100} height={100} />
             </div>
           </CarouselItem>
           <CarouselItem key={8} className={cn(cls.CarouselItem)}>
             <div className="p-1">
-              <BrandCard imageUrl="/Lenovo.png" width={100} height={100} />
+              <BrandCard imageUrl="/msi.png" width={100} height={100} />
+            </div>
+          </CarouselItem>
+          <CarouselItem key={8} className={cn(cls.CarouselItem)}>
+            <div className="p-1">
+              <BrandCard imageUrl="/asus.png" width={100} height={100} />
             </div>
           </CarouselItem>
         </>
