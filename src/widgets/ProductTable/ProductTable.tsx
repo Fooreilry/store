@@ -96,7 +96,11 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: 'img',
     header: 'Картинка',
     cell: ({ row }) => {
-      return <Image src={row.getValue<string>('img')} alt="Жаба" width={100} height={100} className="inline-block" />;
+      return (
+        <div className="bg-white rounded-lg flex justify-center items-center w-[110px] h-[110px]">
+          <Image src={row.getValue<string>('img')} alt="Жаба" width={100} height={100} className="inline-block" />
+        </div>
+      );
     },
   },
   {
@@ -201,11 +205,14 @@ export function ProductTable<TData, TValue>({ columns, data }: DataTableProps<TD
           <SelectContent>
             <SelectGroup>
               <SelectLabel>Категории</SelectLabel>
-              <SelectItem value="1">Category 1</SelectItem>
-              <SelectItem value="2">Category 2</SelectItem>
-              <SelectItem value="3">Category 3</SelectItem>
-              <SelectItem value="4">Category 4</SelectItem>
-              <SelectItem value="5">Category 5</SelectItem>
+              <SelectItem value="1">Смартфоны и фототехника</SelectItem>
+              <SelectItem value="2">Телевизоры и аксессуары</SelectItem>
+              <SelectItem value="3">Консоли и видеоигры</SelectItem>
+              <SelectItem value="4">Ноутбуки</SelectItem>
+              <SelectItem value="5">Компьютеры и ПО</SelectItem>
+              <SelectItem value="5">Периферия и аксессуары</SelectItem>
+              <SelectItem value="5">Комплектующие для ПК</SelectItem>
+              <SelectItem value="5">Сетевое оборудование</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
