@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 export const HeaderAdmin = () => {
   return (
-    <header className="flex justify-between items-center py-4 px-4 xl:px-10 md:5">
+    <header className="flex justify-between items-center py-4 px-4 xl:px-10 md:5 bg-[#EDEDED]">
       {/* TODO: Переделать!!! */}
       <Link href="/">
         <h1 className="text-2xl">
-          <p className="text-right">Admin</p>
+          <p className="text-right ">Admin</p>
         </h1>
       </Link>
 
