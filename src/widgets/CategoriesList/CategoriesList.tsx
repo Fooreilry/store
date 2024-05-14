@@ -47,14 +47,23 @@ export const CategoriesList = ({ className = '' }: { className?: string }) => {
     <ul className={cn(cls.CategoryList, className)}>
       <li>
         <Link href="/catalog/notebook">
-          <CategoriesCard titleCategory="Ноутбуки" imageCategory="/2_14-128x128.png" />
+          <CategoriesCard titleCategory="Ноутбуки" imageCategory="/csm_MSI_NB_GL73_Photo_02__7753ddf69e.png" />
         </Link>
       </li>
       <li>
-        <CategoriesCard titleCategory="Телевизоры" imageCategory="/2_14-128x128.png" />
+        <CategoriesCard titleCategory="Телевизоры и аксессуары" imageCategory="/128579_original_front.png" />
       </li>
       <li>
-        <CategoriesCard titleCategory="Переферия" imageCategory="/2_14-128x128.png" />
+        <CategoriesCard titleCategory="Консоли и видеоигры" imageCategory="/orig.png" />
+      </li>
+      <li>
+        <CategoriesCard titleCategory="Периферия и аксессуары" imageCategory="/240.png" />
+      </li>
+      <li>
+        <CategoriesCard titleCategory="Комплектующие для ПК" imageCategory="/1500x300_1_1.png" />
+      </li>
+      <li>
+        <CategoriesCard titleCategory="Сетевое оборудование" imageCategory="/17a272af841ce8922a184bcb975eb311.png" />
       </li>
     </ul>
   );

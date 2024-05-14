@@ -1,23 +1,33 @@
-import { Badge } from '@/src/shared/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/src/shared/ui/card';
 import { cn } from '@/src/shared/utils';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
 
-export const NewsCard = ({ className = '' }: { className?: string }) => {
+export const NewsCard = ({
+  className = '',
+  img,
+  title,
+  text,
+  date,
+}: {
+  className?: string;
+  date?: string;
+  text?: string;
+  title?: string;
+  img?: string | StaticImport;
+}) => {
   return (
     <Card className={cn('mx-auto overflow-hidden rounded-lg bg-secondary/20 shadow p-0', className)}>
-      <Image src="/Жаба.png" className="w-full h-full max-h-[28vh] min-h-52" alt="Жаба" width={200} height={200} />
+      {img && <Image src={img} className="w-full h-full max-h-[28vh] min-h-52" alt="Жаба" width={200} height={200} />}
       <CardHeader>
-        <h3 className="text-2xl font-medium">Migrating to Sailboat UI</h3>
+        <h3 className="text-2xl font-medium">{title}</h3>
       </CardHeader>
       <CardContent className="py-0">
-        <p>
-          Sailboat UI is a modern UI component library for Tailwind CSS. Get started with 150+ open source components.
-        </p>
+        <p>{text}</p>
       </CardContent>
       <CardFooter className="pt-3 pb-4 flex justify-between">
-        <p>Дата: 23.12.2022</p>
-        <Badge className="bg-red-500 ">Железо</Badge>
+        <p>Дата: {date}</p>
+        {/* <Badge className="bg-red-500 ">Железо</Badge> */}
       </CardFooter>
     </Card>
   );

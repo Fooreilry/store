@@ -10,7 +10,11 @@ export const NewsList = ({ className = '' }: { className?: string }) => {
       <NewsFilters />
       <ul className={cn(cls.NewsList, 'mt-4', className)}>
         <li>
-          <NewsCard />
+          <NewsCard
+            title="Cмартфоны серии HUAWEI Pura 70 будут доступны для предзаказа 15 мая"
+            date="13.05.2024"
+            img="/new1.jpg"
+          />
         </li>
         <li>
           <NewsCard />
