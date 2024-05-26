@@ -19,7 +19,7 @@ export const MENU: MenuItemType[] = [
   },
   {
     title: 'Список товаров',
-    link: '/ListProduct',
+    link: '/admin/products',
     icon: ClipboardList,
   },
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/src/shared/utils';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -17,7 +18,7 @@ const Sidebar = ({
   const path = usePathname();
 
   return (
-    <aside className={`${style.sidebar} ${IsOpen ? style.sidebar_open : style.sidebar_close}`}>
+    <aside className={cn(style.sidebar, IsOpen ? style.sidebar_open : style.sidebar_close, 'bg-primary/20')}>
       <div className={style.sidebar_menu}>
         <ul className={style.menu_container}>
           {MENU.map((item) => (

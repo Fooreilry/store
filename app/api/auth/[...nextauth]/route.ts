@@ -1,9 +1,10 @@
 /* eslint-disable no-param-reassign */
 import CredentialsConfig from '@/src/shared/Configs/AuthProviders/CredentialsConfig';
+import type { NextAuthOptions } from 'next-auth';
 
 import NextAuth from 'next-auth/next';
 
-const handler = NextAuth({
+export const authOption: NextAuthOptions = {
   providers: [CredentialsConfig],
 
   pages: {
@@ -29,6 +30,8 @@ const handler = NextAuth({
   session: {
     strategy: 'jwt',
   },
-});
+};
+
+const handler = NextAuth(authOption);
 
 export { handler as GET, handler as POST };

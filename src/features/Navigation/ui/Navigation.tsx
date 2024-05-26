@@ -15,6 +15,7 @@ import { NavigationLinks } from './NavigationLinks';
 export const Navigation = ({ className = '' }: { className?: string }) => {
   const [isShow, isSetShow] = useState(false);
   const { data: session, status } = useSession();
+  console.log(session);
 
   const onOpen = () => {
     document.body.style.overflow = 'hidden';

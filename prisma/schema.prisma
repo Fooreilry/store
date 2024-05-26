@@ -7,7 +7,6 @@ datasource db {
   url      = env("POSTGRES_PRISMA_URL")
 }
 
-
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -18,5 +17,89 @@ model User {
   phone         String?  @unique
   address       String?
 
-  @@map("users")
+  news News[]
+  reviews  Review[]
+  orders Order[]
+
+  @@map("user")
+}
+
+model Category {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  products Product[]
+}
+
+model Product {
+  id             Int       @id @default(autoincrement())
+  name           String
+  categoryId     Int
+  description    String?
+  img            String?
+  characteristics Json
+  rating         Float     @default(0.0)
+  price          Float
+  isActive       Boolean   @default(true)
+  createDate     DateTime  @default(now())
+
+  reviews  Review[]
+  orderProducts OrderProduct[]
+
+  category       Category  @relation(fields: [categoryId], references: [id])
+
+  @@index([categoryId], name: "idx_category")
+}
+
+model News {
+  id            Int       @id @default(autoincrement())
+  title         String
+  text          String
+  userId        String
+  image         String
+  dataCreate    DateTime  @default(now())
+
+  user          User      @relation(fields: [userId], references: [id])
+
+  @@index([userId], name: "idx_user")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  productId Int
+  rating    Float
+  text      String?
+  createDate DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id])
+
+  @@index([userId], name: "idx_review_user")
+  @@index([productId], name: "idx_review_product")
+}
+
+model Order {
+  id         Int          @id @default(autoincrement())
+  userId     String
+  sumPrice   Float
+  status     String
+  dateCreate DateTime     @default(now())
+
+  user       User         @relation(fields: [userId], references: [id])
+  orderProducts OrderProduct[]
+
+  @@index([userId], name: "idx_order_user")
+}
+
+model OrderProduct {
+  id        Int      @id @default(autoincrement())
+  orderId   Int
+  productId Int
+  quantity  Int
+
+  order     Order    @relation(fields: [orderId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id])
+
+  @@index([orderId], name: "idx_order_product_order")
+  @@index([productId], name: "idx_order_product_product")
 }

@@ -14,7 +14,7 @@ const CredentialsConfig = Credentials({
       throw new Error('Введите логин или пароль');
     }
 
-    const user = await prisma.user.findFirst({
+    const user = await prisma.user.findUnique({
       where: {
         email: credentials.email,
       },
