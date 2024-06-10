@@ -16,7 +16,7 @@ export const NewsFilters = ({ className = '' }: { className?: string }) => {
     >
       <Select>
         <SelectTrigger className="w-full xs:w-[240px]">
-          <SelectValue placeholder="Select a fruit" />
+          <SelectValue placeholder="Новое" />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
@@ -29,7 +29,7 @@ export const NewsFilters = ({ className = '' }: { className?: string }) => {
           </SelectGroup>
         </SelectContent>
       </Select>
-      <Select>
+      {/* <Select>
         <SelectTrigger className="w-full xs:w-[240px]">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
@@ -43,7 +43,7 @@ export const NewsFilters = ({ className = '' }: { className?: string }) => {
             <SelectItem value="pineapple">Pineapple</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>
+      </Select> */}
     </div>
   );
 };

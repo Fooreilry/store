@@ -20,7 +20,7 @@ export const ThemeButton = () => {
   }
   return (
     <Button variant="ghost" className={cn()} onClick={toggleTheme}>
-      {theme === 'dark' ? <Sun /> : <Moon />}
+      {theme === 'dark' ? <Moon /> : <Sun />}
     </Button>
   );
 };

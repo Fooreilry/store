@@ -17,13 +17,17 @@ export const NewsList = ({ className = '' }: { className?: string }) => {
           />
         </li>
         <li>
-          <NewsCard />
+          <NewsCard title="На глобальный рынок вышли Ryzen 7 8700F и Ryzen 5 8400F" img="/New2.png" date="14.05.2024" />
         </li>
         <li>
-          <NewsCard />
+          <NewsCard
+            img="/new3.jpg"
+            title="Представлено ПО Thunderbolt Share, позволяющее совместно использовать экраны, периферию и файлы на разных ПК"
+            date="15.05.2024"
+          />
         </li>
         <li>
-          <NewsCard />
+          <NewsCard img="/new4.jpg" title="Стартовали продажи Redmi Book Pro 2024 в России" ate="13.05.2024" />
         </li>
         <li>
           <NewsCard />

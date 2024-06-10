@@ -22,10 +22,10 @@ export const ProductCard = ({
   reting?: number;
 }) => {
   return (
-    <Card className={cn('max-w-full hover:shadow-md bg-secondary/30 flex flex-col justify-between', className)}>
-      <CardContent className="pb-0 pt-5 px-3">
-        <div className=" h-[170px] w-52 mx-auto">
-          {image && <Image src={image} alt="Жаба" width={200} height={200} />}
+    <Card className={cn('max-w-full hover:shadow-md bg-secondary/30 flex flex-col', className)}>
+      <CardContent className="pb-0 pt-4 px-3">
+        <div className=" h-[200px] flex  justify-center items-center bg-white w-full rounded-lg ">
+          {image && <Image src={image} alt="Жаба" className="mx-auto w-52" width={200} height={200} />}
         </div>
         <div className="mt-4 flex gap-3">
           <Counter icon={<Star className="stroke-primary" height={20} width={20} strokeWidth={3} />} value={reting} />
@@ -38,7 +38,7 @@ export const ProductCard = ({
       <CardHeader className="py-4 px-3">
         <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
-      <CardFooter className="pt-0 pb-5 px-3">
+      <CardFooter className="pt-0 pb-5 px-3 mt-auto">
         <div className="flex justify-between w-full items-center">
           <p className="text-base font-bold flex flex-col">
             {/* <span className="text-sm text-primary leading-none ml-3 line-through">$ 12.00</span> */}

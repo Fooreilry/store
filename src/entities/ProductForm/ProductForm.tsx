@@ -11,6 +11,7 @@ import { Input } from '@/src/shared/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/src/shared/ui/select';
 import { Textarea } from '@/src/shared/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Plus } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 // id, name, img, price, isActive, description, category, createdAt, updatedAt, rating
@@ -46,7 +47,7 @@ export const ProductForm = ({ formType }: { formType: FormType }) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className=" grid grid-cols-12 gap-8 p-10 ">
+      <form onSubmit={form.handleSubmit(onSubmit)} className=" grid grid-cols-12 gap-8 p-10">
         <div className="col-span-5 px-4">
           <FormField
             control={form.control}
@@ -60,6 +61,10 @@ export const ProductForm = ({ formType }: { formType: FormType }) => {
               </FormItem>
             )}
           />
+          <div className="flex items-center space-x-2 mt-4 text-primary">
+            <Plus className="w-6 h-6" />
+            <div className="text-lg font-medium">Добавить характеристику</div>
+          </div>
         </div>
         <div className="col-span-7 space-y-6">
           <FormField

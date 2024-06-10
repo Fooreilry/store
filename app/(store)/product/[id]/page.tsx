@@ -1,4 +1,5 @@
 import { Button } from '@/src/shared/ui/button';
+import { Table, TableCell, TableRow } from '@/src/shared/ui/table';
 import { Textarea } from '@/src/shared/ui/textarea';
 import { Star, UserCircle2 } from 'lucide-react';
 import Image from 'next/image';
@@ -10,40 +11,72 @@ export default async function page({ params }: { params: { id: string } }) {
     <main>
       <section className="mt-6 ">
         <div className="grid grid-cols-12 space-x-10 mt-4">
-          <div className="col-span-6 mx-auto">
-            <Image src="/2_14-128x128.png" alt="Жаба" width={300} height={300} />
+          <div className="col-span-5 mx-auto bg-white rounded-lg w-full flex justify-center items-center">
+            <Image src="/prod4.jpg" alt="Жаба" width={500} height={500} />
           </div>
-          <div className="col-span-6 flex flex-col justify-between py-2 space-y-3">
-            <h2 className=" text-5xl font-bold">MacBook Air</h2>
+          <div className="col-span-6 flex flex-col py-2 space-y-3 ">
+            <h2 className=" text-5xl font-bold">Ноутбук Apple MacBook Pro</h2>
             <div className=" flex gap-3 items-center">
-              <p className="text-2xl font-bold ">Рейтинг:</p>
-              <Star /> <Star /> <Star /> <Star />
+              <p className="text-2xl font-bold">Рейтинг:</p>
+              <Star className=" stroke-primary fill-primary" /> <Star className=" stroke-primary fill-primary" />
+              <Star className=" stroke-primary fill-primary" /> <Star className=" stroke-primary fill-primary" />
+              <Star className=" stroke-primary fill-primary" />
               <div>(5.0)</div>
             </div>
             <div className="space-y-3">
               <h3 className="text-2xl font-bold mb-3">Характеристики</h3>
-              <ul>
-                <li>- Материал: высококачественные прочные материалы</li>
-                <li>- Дизайн: элегантный и стильный</li>
-                <li>- Функциональность: множество полезных функций, включая карманы, регулируемые ремни и застежки</li>
-                <li>- Вместительность: достаточно места для хранения вещей</li>
-                <li>- Легкость и удобство в ношении</li>
-                <li>- Подходит для повседневного использования, поездок и активного образа жизни</li>
-              </ul>
+              <div className=" border rounded-lg">
+                <Table className=" bg-secondary/20">
+                  <TableRow>
+                    <TableCell>Модель</TableCell>
+                    <TableCell className=" border-l">Apple MacBook Air</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Год релиза</TableCell>
+                    <TableCell className=" border-l">2022</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Операционная система</TableCell>
+                    <TableCell className=" border-l">macOS</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Тип экрана</TableCell>
+                    <TableCell className=" border-l">IPS</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Диагональ экрана (дюйм)</TableCell>
+                    <TableCell className=" border-l">13.6"</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Разрешение экрана</TableCell>
+                    <TableCell className=" border-l">2560x1664</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Модель процессора</TableCell>
+                    <TableCell className=" border-l">Apple M2</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Общее количество ядер</TableCell>
+                    <TableCell className=" border-l">8</TableCell>
+                  </TableRow>
+                </Table>
+              </div>
             </div>
           </div>
         </div>
         <div className="mt-6">
           <h3 className="text-2xl font-bold mb-3">Описание</h3>
           <p className="text-lg leading-8 border border-secondary bg-secondary/20 rounded-lg p-4 shadow-md">
-            Этот товар - идеальное решение для тех, кто ищет удобство, стиль и функциональность в одном продукте.
-            Изготовлен из высококачественных материалов, он прочный и долговечный. Этот товар имеет элегантный дизайн,
-            который подойдет к любому интерьеру. Он оснащен множеством полезных функций, таких как удобные карманы для
-            хранения мелочей, регулируемые ремни для комфортной посадки и застежки для безопасного хранения вещей.
-            Благодаря своей вместительности, этот товар идеально подойдет для повседневного использования, будь то на
-            работе, в поездке или в городе. Он легкий и удобный в ношении, что делает его идеальным выбором для
-            активного образа жизни. Не упустите возможность приобрести этот универсальный товар, который станет
-            незаменимым аксессуаром в вашем гардеробе.
+            Ноутбук Apple MacBook Air выполнен в металлическом корпусе черного цвета с компактными размерами и весом
+            1.24 кг. Вы сможете брать его с собой повсюду и эффективно справляться с различными задачами. На экране IPS
+            13.6 дюймов (2560x1664 пикселей) отображается детализированная картинка с реалистичной передачей цветовой
+            палитры. Производительная аппаратная платформа обеспечивает скорость системы при запуске программ,
+            веб-серфинге и решении прочих задач. Для удобства управления в мобильном компьютере Apple MacBook Air
+            установлены эргономичная клавиатура с подсветкой и тачпад. Широкий набор интерфейсов позволяет подключаться
+            к внешним устройствам. Акустическая система со стереодинамиками воспроизводит чистый насыщенный звук.
+            Клавиатура с эргономичной раскладкой и белой подсветкой LED гарантирует комфортную работу в разное время
+            суток. Аккумулятор обладает автономностью до 18 часов на одном заряде и поддерживает стандарт Power
+            Delivery.
           </p>
         </div>
         <div />
